@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: linktree_database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: wds22a
+      POSTGRES_DB: linktree
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
