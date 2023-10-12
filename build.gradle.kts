@@ -1,19 +1,33 @@
 plugins {
-    id("java")
+	java
+	id("org.springframework.boot") version "3.1.4"
+	id("io.spring.dependency-management") version "1.1.3"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "de.hidin"
+version = "0.0.1-SNAPSHOT"
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+}
+
+configurations {
+	compileOnly {
+		extendsFrom(configurations.annotationProcessor.get())
+	}
+}
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+	implementation("org.springframework.boot:spring-boot-starter")
+	compileOnly("org.projectlombok:lombok")
+	annotationProcessor("org.projectlombok:lombok")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks.withType<Test> {
+	useJUnitPlatform()
 }
