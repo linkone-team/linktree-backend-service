@@ -1,5 +1,6 @@
 package de.hidin.linktreebackendservice.entry;
 
+import de.hidin.linktreebackendservice.entity.LinkEntry;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

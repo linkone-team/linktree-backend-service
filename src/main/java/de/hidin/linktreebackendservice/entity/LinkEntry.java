@@ -1,4 +1,4 @@
-package de.hidin.linktreebackendservice.entry;
+package de.hidin.linktreebackendservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,6 +13,7 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "link_entries")
 public class LinkEntry {
 
     @Id
