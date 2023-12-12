@@ -1,6 +1,6 @@
 package de.hidin.linktreebackendservice.user;
 
-import de.hidin.linktreebackendservice.entry.LinkEntry;
+import de.hidin.linktreebackendservice.entity.LinkEntry;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
