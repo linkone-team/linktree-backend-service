@@ -3,12 +3,14 @@ package de.hidin.linktreebackendservice.entry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
-public class LinkEntryEntryService {
+public class LinkEntryService {
     private final LinkEntryRepository linkRepository;
 
     @Autowired
-    public LinkEntryEntryService(LinkEntryRepository linkRepository) {
+    public LinkEntryService(LinkEntryRepository linkRepository) {
         this.linkRepository = linkRepository;
     }
 
@@ -17,6 +19,15 @@ public class LinkEntryEntryService {
         link.setTargetUrl(targetUrl);
         link.setDisplayText(displayText);
         return linkRepository.save(link);
+    }
+
+    public LinkEntry getLinkEntryById(Long id) {
+        return linkRepository.findById(id).orElse(null);
+    }
+
+
+    public List<LinkEntry> getAllLinkEntires() {
+        return linkRepository.findAll();
     }
 
     // Add more methods for CRUD operations or custom queries as needed
