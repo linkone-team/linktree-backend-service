@@ -4,6 +4,8 @@ import de.hidin.linktreebackendservice.entity.LinkCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LinkCollectionService {
     private final LinkCollectionRepository collectionRepository;
@@ -25,6 +27,10 @@ public class LinkCollectionService {
 
     public boolean slugExists(String slug) {
         return getLinkCollectionBySlug(slug) != null;
+    }
+
+    public List<LinkCollection> getAll() {
+        return collectionRepository.findAll();
     }
 
 

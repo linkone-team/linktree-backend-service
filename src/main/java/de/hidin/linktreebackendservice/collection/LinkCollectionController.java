@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/collection")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
@@ -17,6 +19,11 @@ public class LinkCollectionController {
     @PostMapping("/add")
     public ResponseEntity<?> add(@RequestBody LinkCollectionRequest linkCollectionRequest) {
         String slug = linkCollectionRequest.getSlug();
+        if (slug == "all") {
+            return ResponseEntity
+                    .status(HttpStatus.CONFLICT) // 409 Conflict
+                    .body("Error: Slug all can't be used.");
+        }
         if (linkCollectionService.slugExists(slug)) {
             return ResponseEntity
                     .status(HttpStatus.CONFLICT) // 409 Conflict
@@ -27,15 +34,15 @@ public class LinkCollectionController {
         return ResponseEntity.ok(linkCollection);
     }
 
-//    @GetMapping("/get-all")
-//    public ResponseEntity<List<LinkEntry>> getLinkById() {
-//        List<LinkEntry> linkEntries = linkEntryService.getAllLinkEntires();
-//        if (linkEntries != null && !linkEntries.isEmpty()) {
-//            return ResponseEntity.ok(linkEntries);
-//        } else {
-//            return ResponseEntity.notFound().build();
-//        }
-//    }
+    @GetMapping("/get/all")
+    public ResponseEntity<?> getLinkById() {
+        List<LinkCollection> linkCollections = linkCollectionService.getAll();
+        if (linkCollections != null && !linkCollections.isEmpty()) {
+            return ResponseEntity.ok(linkCollections);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 //
 //    @GetMapping("/get/{id}")
 //    public ResponseEntity<LinkEntry> getLinkById(@PathVariable Long id) {
