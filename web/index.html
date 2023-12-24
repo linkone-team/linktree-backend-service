@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul class="menu">
+      <li class="logo"><a href="index.html" class="img_home"><img src="img/logo.png"/></a></li>
+      <li class="item"><a href="index.html">Home</a></li>
+      <li class="item"><a href="dashboard.html">Dashboard</a></li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <div class="info-text">
+      <h1 class="catch-line">Streamline your social</br>media presence.</h1>
+      <p class="sub-text">One link to share all your music, videos,</br>social media and more.</p>
+    </div>
+
+    <div class="link-container">
+      <label for="wallet-id" class="wallet-label">link-wallet.io/</label>
+      <input type="text" id="wallet-id" class="input" placeholder="wallet">
+      <button type="button" id="join-button" onclick="addCollection()"><span class="join-text">Join for free</span>
+      </button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="cool-text" id="one">
+      <img src="img/happy_people.png">
+    </div>
+
+    <div class="cool-text" id="two">
+      <h2>Was ist LinkWallet?</h2>
+      <p>Start now for free – what are you waiting for!
+        </br>
+        </br>
+        LinkWallet is a practical online tool that allows users to collect and organize multiple links to various online
+        resources in one central location. This is particularly useful for people who want to maximize their presence on
+        social media or other platforms by providing a single, easily accessible link directory. Each link is displayed
+        as a separate button on your LinkWallet page, allowing visitors to access the desired content with a simple
+        click.
+      </p>
+    </div>
+  </div>
+  <div id="overlay" onclick="off()">
+    <div id="overlay-text">Overlay Text</div>
+  </div>
+</header>
+
+<script src="js/header.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <ul class="menu">
+      <li class="logo"><a href="index.html" class="img_home"><img src="img/logo.png"/></a></li>
+      <li class="item"><a href="index.html">Home</a></li>
+      <li class="item"><a href="dashboard.html">Dashboard</a></li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+  <div class="content-dashboard">
+    <div class="table-shadow">
+      <h1 class="dashboard-title">Administrator - Manage Wallets</h1>
+      <input type="text" id="search" class="input" placeholder="Search Link...">
+      <a class="add-link"><i class="fa-solid fa-plus"></i> Add Link</a>
+      <a class="edit-image">Edit Image</a>
+      <div class="table-div">
+        <table id="table" class="table">
+          <tbody>
+          <!--table data filled with js-->
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination-controls">
+        <a class="pagination-button" id="page-backward"><i class="fa-solid fa-arrow-left"></i></a>
+        <a class="pagination-button" id="page-forward"><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <h6 class="page-info" id="page-info">Page 1 of 1</h6>
+    </div>
+    <div id="confirmationBox" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeButton">&times;</span>
+        <h2 id="modal-title">Delete Entry</h2>
+        <p id="modal-body">Are you sure you want to delete the entry <span id="linkElement" class="red-slug"></span>?</p>
+        <button id="confirmAction">Yes</button>
+        <button id="cancelAction">No</button>
+      </div>
+    </div>
+    <div id="addLinkBox" class="modal">
+      <div class="modal-content">
+        <span class="close" id="addLinkCloseButton">&times;</span>
+        <h2 id="addLinkModal-title">Add New Link</h2>
+        </br>
+        <p id="addLinkModal-body">Please enter the details of the new link:</p>
+          </br>
+          <label for="linkTitle">Title:</label>
+          <input type="text" id="linkTitle" name="linkTitle" class="add-link-input"><br><br>
+          <label for="linkUrl">URL:</label>
+          <input type="text" id="linkUrl" name="linkUrl" class="add-link-input"><br><br>
+          <button type="submit" id="addLinkConfirmAction"class="add-link-button">Add Link</button>
+          <button type="button" id="addLinkCancelAction" class="add-link-button">Cancel</button>
+      </div>
+    </div>
+    <div id="uploadModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Upload Image</h2>
+        </br>
+        </br>
+        <form id="uploadForm">
+          <input type="file" id="imageInput" required>
+          </br>
+          </br>
+          <button type="button" id="uploadButton">Upload</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+<script src="js/wallet-editor.js"></script>
+</body>
+
+</html>

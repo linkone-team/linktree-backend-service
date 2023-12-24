@@ -1,0 +1,435 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F4F4F4;
+  font-family: Roboto;
+}
+
+nav {
+  background: #FFF;
+  padding: 0 15px;
+}
+
+.item {
+  padding: 10px;
+}
+
+a {
+  color: #99A1AA;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+
+/* Add this rule to override padding for <a> tag inside .logo class */
+.menu li.logo a {
+  padding: 0;
+}
+
+
+.logo {
+  padding: 7.5px 10px 7.5px 0;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.toggle {
+  order: 2;
+  text-align: right;
+  color: #000;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  opacity: 0.7;
+  display: none;
+}
+
+.active .item {
+  display: block;
+}
+
+.content {
+  padding: 100px 20px 0px 20px;
+}
+
+.container {
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+.cool-text {
+  padding-left: 0px;
+}
+
+.cool-text h2 {
+  font-size: 48px;
+  line-height: 58px;
+  color: #363636;
+}
+
+.cool-text p {
+  font-size: 22px;
+  line-height: 28px;
+  color: #787878;
+  font-weight: 400;
+}
+
+#one {
+  float: none;
+  margin-right: 0;
+  width: auto;
+  text-align: center;
+}
+
+
+#two {
+  overflow: hidden;
+  width: auto;
+  margin: 20px;
+  text-align: center;
+}
+
+
+.catch-line {
+  color: #000;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sub-text {
+  color: #6A6F74;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.link-container {
+  margin: 40px 0 0 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #F5F5F5; /* Change to match your specific grey */
+  border-radius: 5px; /* Adjust if you need rounded corners */
+  position: relative;
+}
+
+.input, .add-link-input {
+  padding: 10px 0px 10px 10px;
+  border: none;
+  font-size: 18px;
+  color: #6A6F74;
+  background-color: #F4F4F4;
+}
+
+
+.input:focus {
+  outline: none;
+  border: none;
+  /* Or, for a background color change: */
+  background-color: #e8e8e8; /* Use a light color to indicate focus */
+}
+
+.wallet-label {
+  position: absolute;
+  left: 20px; /* Adjust to match the padding of your input field */
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  pointer-events: none;
+}
+
+#wallet-id {
+  padding: 10px 0px 10px 132px;
+  width: 250px;
+  background-color: #FFF;
+}
+
+#join-button {
+  background-color: #FFEF00; /* Yellow background */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#wallet-id:focus {
+  outline: none;
+  border: none;
+  /* Or, for a background color change: */
+  background-color: #e8e8e8; /* Use a light color to indicate focus */
+}
+
+
+.join-text {
+  font-size: 18px;
+}
+
+.content-dashboard {
+  background-color: #FFF;
+  margin: 10px 10px 20px 10px;
+  text-align: center;
+}
+
+.table-shadow {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12),
+  0 1px 2px 0 rgba(0, 0, 0, .24);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12),
+  0 1px 2px 0 rgba(0, 0, 0, .24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12),
+  0 1px 2px 0 rgba(0, 0, 0, .24);
+}
+
+#search {
+  margin: 10px 0px 10px 10px;
+}
+
+
+.dashboard-title {
+  padding: 20px 10px 10px;
+  color: #333;
+}
+
+.table {
+  padding: 20px 20px 20px 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.table tr td {
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  padding: 20px 5px;
+  text-align: left;
+  font-size: 22px;
+}
+
+.other-col {
+  white-space: nowrap;
+}
+
+.col1 {
+  width: 99%;
+}
+
+.table-div {
+  display: flex;
+  justify-content: center;
+}
+
+table .fa-copy, table .fa-pen, table .fa-trash {
+  color: #6A6F74;
+  transition: color 0.1s ease;
+}
+
+.fa-copy:hover, .fa-pen:hover, .fa-trash:hover {
+  color: #555; /* Color when hovered */
+}
+
+.page-info {
+  padding: 0 0 10px 0;
+}
+
+.sort-toggle, .add-link, .edit-image, .add-link-button {
+  font-size: 18px;
+  padding: 10px;
+  color: #111;
+  background-color: #F4F4F4;
+  cursor: default;
+}
+
+.sort-toggle:hover, .pagination-button:hover, .add-link:hover, .edit-image:hover, .add-link-button:hover {
+  color: #555;
+  cursor: default;
+}
+
+.pagination-controls {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.pagination-button {
+  font-size: 18px;
+  padding: 5px;
+  color: #111;
+  background-color: #F4F4F4;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Add this to your CSS file or style block */
+.red-slug {
+  color: red; /* Set the text color to red */
+}
+
+.container #one img {
+  max-width: 476px;
+}
+
+/* Desktop menu */
+@media all and (min-width: 1200px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+
+  .logo {
+    order: 0;
+    flex: 1;
+  }
+
+  .item {
+    order: 1;
+    display: block;
+    width: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .content {
+    padding: 60px 0px 0px 60px;
+  }
+
+  #wallet-id {
+    padding: 10px 0px 10px 220px;
+    width: 400px;
+    font-size: 32px;
+  }
+
+  .wallet-label {
+    font-size: 32px;
+  }
+
+  .join-text {
+    font-size: 32px;
+  }
+
+  .content-dashboard {
+    margin: 30px 23% 20px 23%;
+  }
+
+  .table {
+    align-self: center;
+  }
+
+  #one {
+    float: left;
+    margin-right: 80px;
+    width: 40%;
+    text-align: left;
+  }
+
+  .container {
+    overflow: hidden;
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container #one img {
+    max-width: 676px;
+  }
+
+  #two {
+    width: 50%;
+    text-align: left;
+  }
+
+}
+

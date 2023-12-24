@@ -1,0 +1,33 @@
+
+
+.material-div {
+  background-color: #009688; /* Teal color */
+  padding: 20px;
+  margin: 20px;
+  margin-left:100px;
+  margin-right:100px;
+  /* Top margin */
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.material-div a {
+  color: white;
+}
+
+.round-img {
+  border-radius: 50%; /* Make the image round */
+  /* Additional styling */
+  width: 150px; /* Example width */
+  height: 150px; /* Example height */
+  object-fit: cover; /* This ensures the image covers the area without stretching */
+}
+
+.container1 {
+  margin-top:60px;
+  text-align: center; /* Center text inside the container horizontally */
+}
